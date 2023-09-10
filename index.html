@@ -1,0 +1,205 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta name="generator" content="Primo" />
+      <!-- HEAD_svelte-1funr7q_START --><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="UTF-8"><style>/* Reset & standardize default styles */
+@import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
+
+/* Design tokens (apply to components) */
+:root {
+  /* Custom theme options */
+  --color-accent: rebeccapurple;
+
+  /* Base values */
+  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+  --border-radius: 8px;
+  --border-color: #cbcace;
+}
+
+/* Root element (use instead of `body`) */
+#page {
+  font-family: system-ui, sans-serif;
+  color: white;
+  line-height: 1.2;
+  font-size: 1.125rem;
+  background: black;
+}
+
+/* Elements */
+.section-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+a.link {
+  line-height: 1.3;
+  font-weight: 400;
+  border-bottom: 2px solid;
+  transform: translateY(-2px); /* move link back into place */
+  transition: var(--transition, 0.1s border);
+}
+
+a.link:hover {
+    border-color: transparent;
+  }
+
+.heading {
+  font-size: clamp(2rem,10vw, 3rem);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.button {
+  color: #111;
+  font-size: 1rem;
+  background: white;
+  border-radius: 2rem;
+  padding: 18px 28px;
+  transition: var(--transition, 0.1s box-shadow);
+  border: 0;
+}
+
+/* reset */
+
+.button:hover {
+    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);
+  }
+
+.button.is-inverted {
+    background: black;
+    color: white;
+  }
+
+/* Content Section */
+.content { 
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  line-height: 1.4;
+  font-size: 2rem;
+}
+.content > * {
+    max-width: 600px;
+  }
+.content p {
+    padding: 0.25rem 0;
+  }
+.content img {
+    width: 100%;
+    margin: 2rem 0;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+.content a.link {
+  }
+.content h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+.content h2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+.content h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+.content ul {
+    list-style: disc;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.content ol {
+    list-style: decimal;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.content blockquote {
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+.content h1 {
+    padding-top: 10rem;
+    max-width: 800px;
+  }</style><!-- HEAD_svelte-1funr7q_END -->
+      <style>.section-container.svelte-sip8mq.svelte-sip8mq{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}.logo.svelte-sip8mq.svelte-sip8mq{font-size:1.5rem;font-weight:600;line-height:1.2}.desktop-nav.svelte-sip8mq.svelte-sip8mq{display:none;align-items:center;justify-content:space-between;width:100%}.desktop-nav.svelte-sip8mq nav.svelte-sip8mq{display:flex;gap:2rem}.desktop-nav.svelte-sip8mq nav a.link.svelte-sip8mq{border-color:transparent;transition:border-color 0.1s;font-size:0.95rem}.desktop-nav.svelte-sip8mq nav a.link.svelte-sip8mq:hover{border-color:initial}@media(min-width: 800px){.desktop-nav.svelte-sip8mq.svelte-sip8mq{display:flex
+}}.mobile-nav.svelte-sip8mq.svelte-sip8mq{display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:500}@media(min-width: 800px){.mobile-nav.svelte-sip8mq.svelte-sip8mq{display:none
+}}#popup.svelte-sip8mq.svelte-sip8mq{font-size:1.25rem;display:grid;gap:1rem;position:absolute;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));border-radius:var(--border-radius);inset:0.5rem;bottom:initial;padding:2rem;z-index:1;color:black}#popup.svelte-sip8mq button#close.svelte-sip8mq{position:absolute;right:1rem;top:1rem}
+.section-container.svelte-o9z257.svelte-o9z257{display:grid;justify-content:center}.card.svelte-o9z257.svelte-o9z257{padding:4rem clamp(2rem, 10vw, 7rem);border:1px solid var(--border-color, #eee);border-radius:var(--border-radius);text-align:center;display:grid}.heading.svelte-o9z257.svelte-o9z257{margin-bottom:1.5rem}.body.svelte-o9z257.svelte-o9z257{max-width:700px;margin-bottom:2.25rem}.buttons.svelte-o9z257.svelte-o9z257{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}.buttons.svelte-o9z257 .button.svelte-o9z257{display:flex;align-items:center;gap:0.25rem}
+.section-container.svelte-1m1m225.svelte-1m1m225{display:flex;justify-content:space-between;flex-direction:column;align-items:center;gap:1rem;padding-top:1rem;padding-bottom:1rem}@media(min-width: 600px){.section-container.svelte-1m1m225.svelte-1m1m225{flex-direction:row
+}}nav.svelte-1m1m225.svelte-1m1m225{display:flex;gap:1rem}nav.svelte-1m1m225 .link.svelte-1m1m225{border-color:transparent}nav.svelte-1m1m225 .link.svelte-1m1m225:hover{border-color:initial}.primo.svelte-1m1m225.svelte-1m1m225{font-weight:600;font-size:0.75rem}.primo.svelte-1m1m225 a.svelte-1m1m225{text-decoration:underline;color:rgb(53, 217, 148)}.social-links.svelte-1m1m225.svelte-1m1m225{display:flex;gap:1.5rem;font-size:1.5rem}.social-links.svelte-1m1m225 a.svelte-1m1m225{color:var(--color-accent, rebeccapurple);transition:var(--transition, 0.1s transform)}.social-links.svelte-1m1m225 a.svelte-1m1m225:hover{transform:scale(1.1)}</style>
+    </head>
+    <body id="page">
+       
+<div class="section" id="section-1086d925"><header class="section-container svelte-sip8mq"><div class="desktop-nav svelte-sip8mq"><a href="/" class="logo svelte-sip8mq">Olio e Vino</a>
+    <nav class="svelte-sip8mq"></nav></div>
+  <div class="mobile-nav svelte-sip8mq"><a href="/" class="logo svelte-sip8mq">Olio e Vino</a>
+    <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START --><g id="iconifySvelte0"><g id="iconifySvelte1"><g id="iconifySvelte2" fill="currentColor"><rect width="18" height="2" x="3" y="11" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="16" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="6" rx=".95" ry=".95"/></g></g></g><!-- HTML_TAG_END --></svg></button>
+    </div></header></div> 
+<div class="section" id="section-3300d169"><section class="section-container svelte-o9z257"><div class="card svelte-o9z257"><h2 class="heading svelte-o9z257">Καλωρίσατε στο Olio e Vino</h2>
+    <div class="body svelte-o9z257"><!-- HTML_TAG_START --><p>Book directly by WhatApp or by Calling us !</p><!-- HTML_TAG_END --></div>
+    <div class="buttons svelte-o9z257"><a class="button svelte-o9z257" href="https://wa.me/306931259667"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.188 8.188 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18c.21-.58.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.47-.74-1.69-.82c-.23-.08-.37-.12-.56.12c-.16.25-.64.81-.78.97c-.15.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.11-.11.27-.29.37-.44c.13-.14.17-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.11-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01Z"/><!-- HTML_TAG_END --></svg>
+        <span>Book from WhatsApp</span>
+      </a><a class="button svelte-o9z257" href="https://www.google.com/maps/dir/39.6263424,19.9196672/olio+e+vino/@39.6253179,19.916539,17z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x135b5d039a0a9d8d:0x1095a8b14a7f82d0!2m2!1d19.9192051!2d39.6246622?entry=ttu"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START --><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z"/><!-- HTML_TAG_END --></svg>
+        <span>Find our location</span>
+      </a><a class="button svelte-o9z257" href="https://www.google.com/search?gs_ssp=eJzj4tVP1zc0LDEwS7M0Sio0YLRSNagwNDZNMk0xMLZMNEi0TLFIsQIKGViaJlokGZokmqdZGKUYeHHn52TmK6QqlGXm5QMAXycSxg&amp;q=olio+e+vino&amp;oq=olio+e+vino&amp;aqs=chrome.1.0i355i512j46i175i199i512j0i512l3j0i22i30l5.3434j0j7&amp;sourceid=chrome&amp;ie=UTF-8#lrd=0x135b5d039a0a9d8d:0x1095a8b14a7f82d0,3,,,,"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START --><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21L12 17.27Z"/><!-- HTML_TAG_END --></svg>
+        <span>Leave us a Google Review</span>
+      </a><a class="button svelte-o9z257" href="tel:+306931259667"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START --><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25c1.12.37 2.32.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2Z"/><!-- HTML_TAG_END --></svg>
+        <span>Call us</span>
+      </a></div></div></section></div> 
+<div class="section" id="section-6c343131"><footer class="section-container svelte-1m1m225"><nav class="svelte-1m1m225"></nav>
+  <span class="primo svelte-1m1m225"><a href="/" class="svelte-1m1m225">Olio e Vino</a> Powered </span>
+  <div class="social-links svelte-1m1m225"><a href="/" aria-label="Facebook" class="svelte-1m1m225"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START --><path fill="currentColor" d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02Z"/><!-- HTML_TAG_END --></svg>
+      </a><a href="/" aria-label="Instagram" class="svelte-1m1m225"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START --><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z"/><!-- HTML_TAG_END --></svg>
+      </a><a href="" aria-label="Location" class="svelte-1m1m225"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START --><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z"/><!-- HTML_TAG_END --></svg>
+      </a><a href="" aria-label="Phone" class="svelte-1m1m225"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START --><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25c1.12.37 2.32.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2Z"/><!-- HTML_TAG_END --></svg>
+      </a><a href="" aria-label="WhatsApp" class="svelte-1m1m225"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.188 8.188 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18c.21-.58.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.47-.74-1.69-.82c-.23-.08-.37-.12-.56.12c-.16.25-.64.81-.78.97c-.15.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.11-.11.27-.29.37-.44c.13-.14.17-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.11-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01Z"/><!-- HTML_TAG_END --></svg>
+      </a></div></footer></div> 
+
+      <script type="module">
+      import('/_symbols/10dae6dc-0d64-4060-8a40-6751b5c9be9f.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-3300d169'),
+              hydrate: true,
+              props: {"heading":"Καλωρίσατε στο Olio e Vino","body":{"html":"<p>Book directly by WhatApp or by Calling us !</p>","markdown":"Book directly by WhatApp or by Calling us !\n\n"},"buttons":[{"icon":"mdi:whatsapp","link":{"url":"https://wa.me/306931259667","label":"Book from WhatsApp"}},{"icon":"mdi:location","link":{"url":"https://www.google.com/maps/dir/39.6263424,19.9196672/olio+e+vino/@39.6253179,19.916539,17z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x135b5d039a0a9d8d:0x1095a8b14a7f82d0!2m2!1d19.9192051!2d39.6246622?entry=ttu","label":"Find our location","active":false}},{"icon":"mdi:star","link":{"url":"https://www.google.com/search?gs_ssp=eJzj4tVP1zc0LDEwS7M0Sio0YLRSNagwNDZNMk0xMLZMNEi0TLFIsQIKGViaJlokGZokmqdZGKUYeHHn52TmK6QqlGXm5QMAXycSxg&q=olio+e+vino&oq=olio+e+vino&aqs=chrome.1.0i355i512j46i175i199i512j0i512l3j0i22i30l5.3434j0j7&sourceid=chrome&ie=UTF-8#lrd=0x135b5d039a0a9d8d:0x1095a8b14a7f82d0,3,,,,","label":"Leave us a Google Review","active":false}},{"icon":"mdi:phone","link":{"url":"tel:+306931259667","label":"Call us"}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/7303cb17-6379-453f-af44-16915f249506.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-1086d925'),
+              hydrate: true,
+              props: {"logo":{"title":"Olio e Vino","image":{"alt":"","src":"","url":"","size":null}},"site_nav":[]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/c35990f0-272f-4e85-ba7e-225fc28475a3.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-6c343131'),
+              hydrate: true,
+              props: {"nav":[],"social":[{"link":{"url":"/","label":"Facebook"},"icon":"mdi:facebook"},{"link":{"url":"/","label":"Instagram"},"icon":"mdi:instagram"},{"link":{"label":"Location","url":"","active":false},"icon":"mdi:location"},{"link":{"label":"Phone","url":"","active":false},"icon":"mdi:phone"},{"link":{"label":"WhatsApp","url":"","active":false},"icon":"mdi:whatsapp"}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    </script>
+    </body>
+  </html>
+  
